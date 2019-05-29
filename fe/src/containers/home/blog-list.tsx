@@ -20,7 +20,7 @@ const BlogList: React.SFC<BlogListProps> = ({ list }: BlogListProps) => (
               dangerouslySetInnerHTML={{ __html: item.title }}
             />
             <span className="list-item-time">
-              {moment(item.createTime).format('YYYY-MM-DD')}
+              {moment(item.createTime * 1000).format('YYYY-MM-DD')}
             </span>
           </Link>
         </li>
